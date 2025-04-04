@@ -6,8 +6,9 @@ interface Props {
 }
 
 export default function CustomButton({title}: Props) {
-    return;
+    return(
     <TouchableOpacity>
         <Text>{title}</Text>
     </TouchableOpacity>
+    );
 }

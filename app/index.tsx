@@ -1,3 +1,4 @@
+import CustomButton from "@/components/__tests__/Title";
 import React, { useState } from "react";
 import { Button, Text, View } from "react-native";
 
@@ -13,18 +14,20 @@ export default function HomeScreen() {
         <View>
             <Text>Bem-vindo ao meu App!</Text>
             <Text>Contador: {count}</Text>
-            <Button 
+             <Button 
                 title="Aumentar"
                 onPress={() => {setCount(count + 1)}} color="green"/>
                 <br></br>
-            <Button 
+             <Button 
                 title="Diminui"
                 onPress={() => {setCount(count - 1)}} color="red"/>
                 <br></br>
-            <Button 
+             <Button 
                 title="Resetar"
                 onPress={() => {setCount(0)}} color="blue"/>
                 <br></br>
+             <CustomButton title="NOME"/>
+
 
         </View>
     );
