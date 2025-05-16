@@ -1,31 +1,15 @@
-import CustomButton from "@/components/Title";
-import React, { useState } from "react";
-import { Button, Text, TextInput, View } from "react-native";
+import { useRouter } from "expo-router"
+import React from "react";
+import { Button, View } from "react-native";
 
 export default function HomeScreen() {
-    const nome = "Diego";
-
-    const [count, setCount] = useState(0);
-    const [name, setNome] = useState(nome);
+    const router = useRouter()
 
     return (
-        <View style={{flex: 1, justifyContent:"center", alignItems:"center"}}>
-            <Text>Bem-vindo ao meu app, {name}!</Text>
-
-            <Text>Contador: {count}</Text>
-             <Button title="Aumentar" onPress={() => {setCount(count + 1)}} />
-             <Button title="Diminui" onPress={() => {setCount(count - 1)}}/>
-             <Button title="Resetar" onPress={() => {setCount(count - count)}}/>
-
-                <TextInput
-                 placeholder="Digite seu nome aqui"
-                 onChangeText={setNome}
-                />
-
-              <CustomButton 
-                   title="Botão vermelho"
-                   onPress={() => {setNome('Diego ' + count)}}
-                />
+        <View>
+            <Button title="tabs" onPress={() => router.push('/navigation/tabs/')}/>
+            <Button title="drawer" onPress={() => router.push('/navigation/drawer/')}/>
+            <Button title="stack" onPress={() => router.push('/navigation/stack/')}/>
         </View>
-    );
+    )
 }
