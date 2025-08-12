@@ -1,4 +1,4 @@
-import CustomButton from "@/components/Title";
+import CustomButton from "@/components/Title.tsx";
 import React, { useState } from "react";
 import { Button, Text, TextInput, View } from "react-native";
 
