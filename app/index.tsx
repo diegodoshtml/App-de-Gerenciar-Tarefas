@@ -10,6 +10,7 @@ export default function HomeScreen() {
             <Button title="tabs" onPress={() => router.push('/navigation/tabs/')}/>
             <Button title="drawer" onPress={() => router.push('/navigation/drawer/')}/>
             <Button title="stack" onPress={() => router.push('/navigation/stack/')}/>
+            <Button title="Socket" onPress={() => router.push('/socket/')}/>
         </View>
     )
 }
